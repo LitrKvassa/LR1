@@ -247,7 +247,6 @@ def run_calculation():
     plt.xlabel("Столбцы")
     plt.ylabel("Строки")
     plt.title("Модель лесного пожара")
-    #plt.show(fig)
     #Функция обновления кадров для анимации
     def update_frame(frame):
         nonlocal F
@@ -263,7 +262,7 @@ def run_calculation():
     zeros = k.count(0)
     ones = k.count(1)
     doubles = len(k)-ones-zeros
-    print(zeros, ones, doubles)
+    print(f' Пустых клеток - {zeros}, деревьев - {ones}, горящих деревьев - {doubles}')
     click.secho("Файл 'animation.gif' сохранён", fg="green")
     plt.show(fig)
     plt.close(fig)
