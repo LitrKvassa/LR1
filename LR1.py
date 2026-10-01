@@ -75,14 +75,13 @@ def input_data():
     data['M'] = click.prompt(" M (число столбцов, int)", type=int, value_proc=validate_threshold)
     data['f'] = click.prompt(" f (вероятность случайного возгорания, float)", type=float, value_proc=validate_probability)
     data['p'] = click.prompt(" p (вероятность роста дерева, float)", type=float, value_proc=validate_probability)
-    data['tti'] = click.prompt(" tti (минимальное число горящих деревьев для возгорания, int)", type=int, value_proc=validate_positive)
+    data['tti'] = click.prompt(" tti (минимальное число горящих деревьев для возгорания, int)", type=int, value_proc=validate_frames)
     data['t'] = click.prompt(" t (число итераций, int)", type=int, value_proc=validate_frames)
     data['inter'] = click.prompt(" inter (задержка между кадрами анимации, мс)", type=int, value_proc=validate_positive)
     data['areatype'] = click.prompt(" areatype (тип окрестности, 0 - Неймана, 1 - Мура)", type=int, value_proc=validate_bool)
     
     click.secho("\n<Данные обновлены>")
     input("<ENTER для возврата в меню>")
-
 
 #Рабочие функции
 def calc4(ca, cell):
